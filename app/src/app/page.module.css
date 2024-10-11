@@ -2,17 +2,35 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: #FFFFFF;
 }
 
 .main {
   flex-grow: 1;
   padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .title {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 2rem;
+  font-family: "Simplon Norm";
+  font-size: 40px;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  color: #000000;
+}
+
+.Paratitle {
+  font-family: "Simplon Norm";
+  font-size: 22px;
+  margin-top: 0;
+  text-align: center;
+  color: #000000;
+}
+
+.fill {
+  margin: 10px;
 }
 
 .content {
@@ -20,8 +38,35 @@
   flex-direction: column;
 }
 
+.filtered {
+}
+
 @media (min-width: 768px) {
   .content {
-    flex-direction: row;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+  }
+
+  .title {
+      font-size: 48px;
+  }
+
+  .Paratitle {
+      font-size: 24px;
+  }
+
+  .fill {
+      margin: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .title {
+      font-size: 36px;
+  }
+
+  .Paratitle {
+      font-size: 20px;
   }
 }

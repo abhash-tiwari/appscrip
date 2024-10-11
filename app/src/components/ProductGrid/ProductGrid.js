@@ -1,9 +1,15 @@
-import React from 'react'
+import { getProducts } from '../library/api';
+import ProductCard from '../ProductCard/ProductCard';
+import styles from './ProductGrid.module.css';
 
-const ProductGrid = () => {
+export default async function ProductGrid() {
+  const products = await getProducts();
+
   return (
-    <div>ProductGrid</div>
-  )
+    <div className={styles.grid}>
+      {products.map((product) => (
+        <ProductCard key={product.id} product={product} />
+      ))}
+    </div>
+  );
 }
-
-export default ProductGrid

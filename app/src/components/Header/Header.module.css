@@ -1,0 +1,138 @@
+.header {
+    font-family: Arial, sans-serif;
+  }
+  
+  .topBar {
+    background-color: #000;
+    color: rgba(235, 76, 107, 1);
+    padding: 5px 0;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 99;
+  }
+  
+  .topBar p {
+    margin: 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-around;
+  }
+  .Logocontainer {
+    max-width: 100vw;
+    margin-top: 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .container>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .mainHeader {
+    background-color: #fff;
+    padding: 10px; 
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .mainHeader .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav li {
+    margin-right: 20px;
+  }
+  
+  .nav a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    font-size: 14px;
+  }
+  
+  .actions {
+    display: flex;
+    align-items: center;
+  }
+  
+  .iconButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 15px;
+    padding: 5px;
+  }
+  
+  .menuButton {
+    display: none;
+  }
+  
+  @media (max-width: 768px) {
+    .nav {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+  
+    .nav.active {
+      display: block;
+    }
+  
+    .nav ul {
+      flex-direction: column;
+    }
+  
+    .nav li {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  
+    .menuButton {
+      display: block;
+      background: none;
+      border: none;
+      cursor: pointer;
+      margin-left: 15px;
+    }
+    .logo{
+        display: none;
+    }
+  }

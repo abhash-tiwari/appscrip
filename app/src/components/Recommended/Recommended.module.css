@@ -1,0 +1,92 @@
+.maincontentdiv {
+    display: flex;
+    justify-content: space-between; 
+    width: 100%; 
+    max-width: 1448px; 
+    height: 88px; 
+    align-items: center; 
+    padding: 10px; 
+    box-sizing: border-box; 
+}
+
+.buttons {
+    display: flex; 
+    height: 40px; 
+    align-items: center; 
+    justify-content: space-between; 
+}
+
+.items {
+    font-family: 'Simplon Norm', sans-serif; 
+    font-size: 18px; 
+    font-weight: 700; 
+    line-height: 40px; 
+    margin-right: 16px; 
+}
+
+.filterbutton {
+    background-color: transparent; 
+    font-family: 'Adobe Caslon Pro', serif; 
+    color: #888792; 
+    font-size: 16px; 
+    font-weight: 400; 
+    line-height: 40px; 
+    cursor: pointer; 
+}
+
+.optionsdropdown {
+    width: 230px;
+    height: 40px; 
+    border-radius: 4px; 
+    padding: 10px 8px; 
+    box-sizing: border-box; 
+}
+
+.selectP {
+    width: 100%; 
+    height: 100%; 
+    border: none; 
+    outline: none; 
+    font-size: 16px; 
+    background-color: transparent; 
+    cursor: pointer; 
+}
+
+/* Mobile view styles */
+@media (max-width: 768px) {
+    .maincontentdiv {
+        flex-direction: column; /* Stack items vertically */
+        height: auto; /* Allow height to adjust based on content */
+        align-items: flex-start; /* Align items to the left */
+    }
+
+    .buttons {
+        justify-content: flex-start; /* Align buttons to the start */
+        margin-bottom: 8px; /* Add some spacing below */
+    }
+
+    .items {
+        font-size: 16px; 
+        margin-right: 0; 
+        margin-bottom: 8px; 
+        text-align: left; 
+    }
+
+    .optionsdropdown {
+        width: 100%; /* Allow dropdown to take full width */
+        margin-top: 8px; 
+    }
+
+    .filterbutton {
+        font-size: 14px; 
+        display: none; /* Hide filter button in mobile view */
+    }
+    
+    /* Style to ensure dropdown does not overflow */
+    .selectP {
+        max-width: 100px; /* Adjust width as necessary */
+        overflow: hidden; /* Prevent overflow */
+        white-space: nowrap; /* Prevent text wrap */
+        text-overflow: ellipsis; /* Add ellipsis if text is too long */
+    }
+}

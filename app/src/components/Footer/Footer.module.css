@@ -1,0 +1,110 @@
+.footerWrapper {
+    background-color: #000; /* Dark background */
+    color: #fff;
+    padding: 40px 20px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .firstUpperContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  
+  .first_box {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .first_headings {
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  
+  .second_subheading {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .inputContainer {
+    display: flex;
+    max-width: 400px;
+  }
+  
+  .emailInput {
+    width: 70%;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .inputbox {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .inputbox:hover {
+    background-color: #444;
+  }
+  
+  .second_box {
+    flex: 1;
+    margin-left: 20px;
+  }
+  
+  .minidesc {
+    font-size: 12px;
+    color: #bbb;
+    margin-top: 5px;
+  }
+  
+  .secondContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  
+  .third_box, .fourth_box {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .second_heading, .third_heading {
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  
+  .thirdContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 20px;
+  }
+  
+  .image_container {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .image_container img {
+    width: 56px;
+    height: 35px;
+  }
+  
+  .imgae_icons {
+    display: flex;
+    gap: 20px;
+  }
+  
+  

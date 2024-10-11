@@ -1,0 +1,67 @@
+.card {
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
+
+.imageContainer {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image {
+    width: fit-content;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: #333;
+    line-height: 1.2;
+}
+
+.message {
+    font-size: 12px;
+    color: #666;
+    margin: 0;
+}
+
+.signIn {
+    color: #1a73e8;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.signIn:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .card {
+        padding: 8px; /* Adjust padding for smaller screens */
+    }
+
+    .title {
+        font-size: 16px; /* Increase title font size */
+    }
+
+    .message {
+        font-size: 14px; /* Increase message font size */
+    }
+}
