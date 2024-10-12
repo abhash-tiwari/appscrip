@@ -1,17 +1,17 @@
-import styles from './Footer.module.css'; // Update the import to use CSS modules
+import styles from './Footer.module.css';
 import Image from "next/image";
-// import gpay from "../../assets/gpay.png";
-// import rectangle from "../../assets/rectangle.png";
-// import paypal from "../../assets/paypal.png";
-// import amex from "../../assets/amex.png";
-// import apple from "../../assets/apple.png";
-// import pay from "../../assets/pay.png";
-// import insta from "../../assets/insta.png";
-// import linkedin from "../../assets/linkedin.png";
+import gpay from "@/app/assets/gpay.png";
+import mastercard from "@/app/assets/mastercard.png";
+import paypal from "@/app/assets/paypal.png";
+import amex from "@/app/assets/amex.png";
+import apple from "@/app/assets/applepay.png";
+import opay from "@/app/assets/opay.png";
+import social from "@/app/assets/social.png";
+import currency from "@/app/assets/usd.png";
 
 const Footer = () => {
   return (
-    <div className={styles.footerWrapper}> {/* Use the imported styles here */}
+    <div className={styles.footerWrapper}>
       <div className={styles.firstUpperContainer}>
         <div className={styles.first_box}>
           <div className={styles.heading_box}>
@@ -25,17 +25,18 @@ const Footer = () => {
           </div>
         </div>
         <div className={styles.second_box}>
-          <div className="">
             <h1 className={styles.first_heading}>CONTACT US</h1>
             <p className={styles.second_subheading}>+44 221 133 5360</p>
             <p className={styles.second_subheading}>customercare@mettamuse.com</p>
             <h1 className={styles.first_heading}>CURRENCY</h1>
-            <p className={styles.second_subheading}>+USD</p>
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+  <Image src={currency} width="32px" height="32px" alt="usd" />
+  <p style={{ marginLeft: '8px' }}>+USD</p>
+</div>
             <p className={styles.minidesc}>
               Transactions will be completed in Euros and a currency reference
               is available on hover.
             </p>
-          </div>
         </div>
       </div>
 
@@ -43,7 +44,7 @@ const Footer = () => {
 
       <div className={styles.secondContainer}>
         <div className={styles.third_box}>
-          <h1 className={styles.second_heading}>mettā muse</h1>
+          <h1 className={styles.second_heading} style={{textAlign: "left"}}>mettā muse</h1>
           <p className={styles.second_subheading}>About Us</p>
           <p className={styles.second_subheading}>Stories</p>
           <p className={styles.second_subheading}>Artisans</p>
@@ -53,7 +54,7 @@ const Footer = () => {
         </div>
 
         <div className={styles.fourth_box}>
-          <h1 className={styles.third_heading}>QUICK LINKS</h1>
+          <h1 className={styles.third_heading} style={{textAlign: "left"}}>QUICK LINKS</h1>
           <p className={styles.second_subheading}>Orders & Shipping</p>
           <p className={styles.second_subheading}>Join/Login as a Seller</p>
           <p className={styles.second_subheading}>Payment & Pricing</p>
@@ -67,20 +68,22 @@ const Footer = () => {
           <div className={styles.fourth_box}>
             <h1 className={styles.third_heading}>FOLLOW US</h1>
             <div className={styles.imgae_icons}>
-              {/* <Image src={insta} width="32px" height="32px" alt="instagram" />
-              <Image src={linkedin} width="32px" height="32px" alt="linkdin" /> */}
+              <Image src={social} width="32px" height="32px" alt="instagram" />
             </div>
           </div>
           <div>
-            <h1 className={styles.third_heading}>mettā muse <span className={styles.second_subheading}>ACCEPTS</span></h1>
+            <div>
+            <h1 className={styles.third_heading} style={{textAlign: "left", textTransform: "lowercase"}}>mettā muse <span className={styles.second_subheading} style={{textTransform: "uppercase"}}>ACCEPTS</span></h1>
             <div className={styles.image_container}>
-              {/* <Image src={gpay} width="56px" height="35px" alt="gpay" />
-              <Image src={rectangle} width="56px" height="35px" alt="mastercard" />
+              <Image src={gpay} width="56px" height="35px" alt="gpay" />
+              <Image src={mastercard} width="56px" height="35px" alt="mastercard" />
               <Image src={paypal} width="56px" height="35px" alt="paypal" />
               <Image src={amex} width="56px" height="35px" alt="amex" />
               <Image src={apple} width="56px" height="35px" alt="apple pay" />
-              <Image src={pay} width="56px" height="35px" alt="Opay" /> */}
+              <Image src={opay} width="56px" height="35px" alt="Opay" />
             </div>
+            </div>
+            
           </div>
         </div>
       </div>

@@ -3,8 +3,9 @@ import styles from './Filters.module.css';
 
 const Filters = ({ onFilterChange }) => {
   const [expandedDropdowns, setExpandedDropdowns] = useState({
-    'IDEAL FOR': true, // Default opened dropdown
+    'IDEAL FOR': true,
   });
+
   const [selectedOptions, setSelectedOptions] = useState({
     CUSTOMIZABLE: false,
     IDEAL_FOR: [],
@@ -12,6 +13,9 @@ const Filters = ({ onFilterChange }) => {
     WORK: [],
     FABRIC: [],
     SEGMENT: [],
+    SUITABLE_FOR: [],
+    RAW_MATERIALS: [],
+    PATTERN: [],
   });
 
   const filterCategories = [
@@ -21,6 +25,9 @@ const Filters = ({ onFilterChange }) => {
     { name: 'WORK', options: ['All', 'Office', 'Home', 'Outdoor'] },
     { name: 'FABRIC', options: ['All', 'Cotton', 'Linen', 'Silk', 'Wool'] },
     { name: 'SEGMENT', options: ['All', 'Budget', 'Premium', 'Luxury'] },
+    { name: 'SUITABLE FOR', options: ['All', 'Men', 'Women', 'Kids', 'Unisex'] },
+    { name: 'RAW MATERIALS', options: ['All', 'Cotton', 'Silk', 'Wool', 'Leather', 'Synthetic'] },
+    { name: 'PATTERN', options: ['All', 'Solid', 'Striped', 'Checked', 'Floral', 'Abstract'] },
   ];
 
   const toggleDropdown = (category) => {
@@ -33,18 +40,18 @@ const Filters = ({ onFilterChange }) => {
   const handleOptionChange = (category, option) => {
     setSelectedOptions((prev) => {
       const currentOptions = prev[category] || [];
-  
+
       if (option === 'All') {
         if (currentOptions.includes('All')) {
           return { ...prev, [category]: [] };
         }
         return { ...prev, [category]: filterCategories.find(f => f.name === category).options.slice(1) };
       }
-  
+
       const updatedOptions = currentOptions.includes(option)
         ? currentOptions.filter((item) => item !== option && item !== 'All')
         : [...currentOptions.filter((item) => item !== 'All'), option];
-  
+
       return { ...prev, [category]: updatedOptions };
     });
   };

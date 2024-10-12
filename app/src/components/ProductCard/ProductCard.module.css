@@ -28,12 +28,19 @@
     flex-direction: column;
 }
 
+.titleContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+}
+
 .title {
     font-size: 14px;
     font-weight: 600;
     margin-bottom: 4px;
     color: #333;
     line-height: 1.2;
+    margin-right: 8px; 
 }
 
 .message {
@@ -52,16 +59,30 @@
     text-decoration: underline;
 }
 
+.heartButton {
+    background: none;
+    border: none; 
+    cursor: pointer;
+    padding: 0;
+}
+
+.heartIcon {
+    width: 24px;
+    height: 24px;
+    stroke: #ff0000;
+    transition: fill 0.3s ease;
+}
+
 @media (max-width: 768px) {
     .card {
-        padding: 8px; /* Adjust padding for smaller screens */
+        padding: 8px; 
     }
 
     .title {
-        font-size: 16px; /* Increase title font size */
+        font-size: 16px;
     }
 
     .message {
-        font-size: 14px; /* Increase message font size */
+        font-size: 14px; 
     }
 }

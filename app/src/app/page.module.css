@@ -31,6 +31,13 @@
 
 .fill {
   margin: 10px;
+  width: 300px; /* Set width for the filters section */
+  transition: visibility 0.3s, opacity 0.3s, transform 0.3s ease; /* Smooth transition for hiding */
+}
+
+.fill.hidden {
+  visibility: hidden; /* Hide the filters */
+  opacity: 0; /* Make them invisible */
 }
 
 .content {
@@ -43,30 +50,35 @@
 
 @media (min-width: 768px) {
   .content {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
   }
 
   .title {
-      font-size: 48px;
+    font-size: 48px;
   }
 
   .Paratitle {
-      font-size: 24px;
+    font-size: 24px;
   }
 
   .fill {
-      margin: 20px;
+    margin: 20px;
   }
 }
 
 @media (max-width: 767px) {
   .title {
-      font-size: 36px;
+    font-size: 36px;
   }
 
   .Paratitle {
-      font-size: 20px;
+    font-size: 20px;
+  }
+
+  .fill {
+    width: 100%; /* Take full width on smaller screens */
+    margin: 10px 0; /* Adjust the margin */
   }
 }

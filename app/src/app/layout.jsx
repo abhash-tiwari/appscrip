@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'Discover Our Products - Your Store Name',
+  title: 'AppScrip Task',
   description: 'Explore our wide range of high-quality products.',
 };
 

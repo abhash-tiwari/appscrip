@@ -43,26 +43,26 @@ export default function Header() {
             <Menu size={20} />
           </button>
           <div className={styles.logo}>
-            <Image src={Logo} alt='logo' width={20} height={20} />
+            <Image src={Logo} alt='logo' width={20} height={20}  />
           </div>
           <div>
-            <Image src={LogoText} alt='logo' width={90} height={24} style={{ marginLeft: "0" }} />
+            <Image src={LogoText} alt='textlogo' width={90} height={24}  className={styles.test} />
           </div>
           <div className={styles.actions}>
             <button className={styles.iconButton} aria-label="Search">
-              <Image src={Search} alt='logo' width={20} />
+              <Image src={Search} alt='searchIcon' width={20} />
             </button>
             <button className={styles.iconButton} aria-label="Search">
-              <Image src={Like} alt='logo' width={20} />
+              <Image src={Like} alt='likeicon' width={20} />
             </button>
             <button className={styles.iconButton} aria-label="Shopping bag">
-              <Image src={Bag} alt='logo' width={20} />
+              <Image src={Bag} alt='bagicon' width={20} />
             </button>
             <button className={styles.iconButton} aria-label="User account">
-              <Image src={User} alt='logo' width={20} />
+              <Image src={User} alt='usericon' width={20} />
             </button>
             <button className={styles.iconButton} aria-label="Language">
-              <Image src={Lang} alt='logo' width={45} />
+              <Image src={Lang} alt='language' width={45} />
             </button>
           </div>
         </div>
